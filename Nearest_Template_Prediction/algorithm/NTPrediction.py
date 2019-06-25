@@ -60,7 +60,7 @@ class NTP:
 		for x in self.input_df.columns.tolist():
 			cl, d, pval = self._running_test(self.input_df[x], perm)
 			predicted_result.append([cl, pval])
-		predicted_result_df = pd.DataFrame(data=predicted_result, index=self.input_df.columns.tolist(), columns=['Class', 'Pval'])
+		predicted_result_df = pd.DataFrame(data=predicted_result, index=self.input_df.columns.tolist(), columns=['Predicted_Class', 'Pval'])
 		return predicted_result_df
 
 	def __init__(self, template_df, input_df):
